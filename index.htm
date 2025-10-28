@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date open day</title>
     <style>
         body {
@@ -26,7 +27,7 @@
         }
 
         .date-link {
-            background-color: rgba(0, 51, 153, 1); /* blu scuro */
+            background-color: rgba(0, 51, 153, 1); /* blu scuro uniforme */
             padding: 20px 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.15);
@@ -36,17 +37,32 @@
             transition: transform 0.2s ease, opacity 0.2s ease;
             text-align: center;
             min-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .date-link:hover {
             opacity: 0.85;
             transform: scale(1.05);
         }
+
+        /* Mobile: riquadri e testo leggermente più grandi */
+        @media (max-width: 500px) {
+            .date-link {
+                font-size: 20px;
+                padding: 25px 35px;
+                min-width: 220px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Scegli una data(date da modificare):</h1>
+    <h1>Scegli una data:</h1>
     
     <div class="dates">
         <a href="data1.html" class="date-link">1 Ottobre 2025</a>
@@ -57,4 +73,3 @@
 
 </body>
 </html>
-
